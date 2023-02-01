@@ -1,0 +1,6 @@
+# START LOGGING OF THIS SCRIPT
+Start-Transcript -Path "C:\newcross\NXRunOnce.log"
+
+Write-Host "TEST"
+
+Stop-Transcript
