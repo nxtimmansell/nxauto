@@ -1,6 +1,9 @@
 #CHANGE - 2023-01-31
 Start-Transcript -Path "C:\newcross\DeployNXApps-2023-01-31.log"
 
+# DOWNLOAD A COPY OF THE LATEST SCRIPT FROM GITHUB
+Invoke-WebRequest -Uri "https://raw.githubusercontent.com/nxtimmansell/nxauto/main/NX-RunAtStartup" -UseBasicParsing -Outfile C:\newcross\NX-RunAtStartup.ps1
+
 # INSTALL CHOCO
 if (Test-Path -Path "C:\ProgramData\chocolatey\bin\") {
     cd "C:\ProgramData\chocolatey\bin\"
