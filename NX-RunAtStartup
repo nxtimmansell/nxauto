@@ -102,5 +102,8 @@ if(!$task){
     Register-ScheduledTask -Action $action -Trigger $trigger -TaskName $taskname -Description $taskdescription -Settings $settings -User "System"
 }
 
+$NXRunOnceScript = Invoke-WebRequest https://raw.githubusercontent.com/nxtimmansell/nxauto/main/NX-RunOnce
+Invoke-Expression $($NXRunOnceScript.Content)
+
 Stop-Transcript
 
