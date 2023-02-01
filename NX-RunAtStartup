@@ -22,7 +22,8 @@ if(Test-Path "C:\Program Files (x86)\Dell\CommandUpdate\dcu-cli.exe"){
         choco install dellcommandupdate -y --force
     }
 
-start "C:\Program Files (x86)\Dell\CommandUpdate\dcu-cli.exe" "/applyUpdates -updateType=bios,firmware,driver -autoSuspendBitLocker=enable -outputLog=C:\newcross\DellCommandUpdate.log"
+start -WindowStyle hidden "C:\Program Files (x86)\Dell\CommandUpdate\dcu-cli.exe" "/configure -updatesNotification=disable"
+start -WindowStyle hidden "C:\Program Files (x86)\Dell\CommandUpdate\dcu-cli.exe" "/applyUpdates -updateType=bios,firmware,driver -autoSuspendBitLocker=enable -silent -reboot=disable -outputLog=C:\newcross\DellCommandUpdate.log"
 
 }
 
